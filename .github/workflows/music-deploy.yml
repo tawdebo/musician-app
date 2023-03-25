@@ -25,16 +25,7 @@ jobs:
           username:  ${{ secrets.SSH_USERNAME }}
           key:  ${{ secrets.SSH_KEY }}
           script: |
-               apt-get update
-               cd ~
-               curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
-               sudo bash /tmp/nodesource_setup.sh
-               sudo apt install nodejs
-               node -v
-               npm install -g pm2
-               cd /home/ubuntu
-               git pull master
-               cd /home/ubuntu/music
+               ssh root@$SSH_IP "cd /home/ubuntu/music && git checkout master && git pull && exit"
                npm install
                npm run build
                pm2 delete all
