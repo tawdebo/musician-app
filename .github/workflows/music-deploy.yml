@@ -26,8 +26,11 @@ jobs:
           key:  ${{ secrets.SSH_KEY }}
           script: |
                cd /home/ubuntu/ && git clone https://github.com/tawdebo/musician-app.git
-               cd /home/ubuntu/musician-app &&  
+               cd /home/ubuntu/musician-app/client
                npm install
                npm run build
-               pm2 delete all
+               pm2 start npm -- start
+               cd /home/ubuntu/musician-app  
+               npm install
+               npm run build
                pm2 start npm -- start
