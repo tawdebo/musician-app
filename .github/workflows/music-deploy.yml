@@ -25,7 +25,7 @@ jobs:
           username:  ${{ secrets.SSH_USERNAME }}
           key:  ${{ secrets.SSH_KEY }}
           script: |
-               ssh -i $SSHKEY root@3.121.109.78 "cd /home/ubuntu/music && git checkout master && git pull && exit"
+               cd /home/ubuntu/music && git checkout master && git pull
                npm install
                npm run build
                pm2 delete all
