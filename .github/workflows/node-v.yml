@@ -28,7 +28,7 @@ jobs:
           # key:  ${{ secrets.SSH_KEY }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-               ~/bin/node -v
-               ~/bin/npm -v
-               ~/bin/pm2 -v
+               /home/devops/nodejs/bin/node -v
+               /home/devops/nodejs/bin/npm -v
+               /home/devops/nodejs/bin/pm2 -v
 
