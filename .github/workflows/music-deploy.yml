@@ -30,8 +30,8 @@ jobs:
           script: |
                cd /home/devops/public_html 
                rm -rf /home/devops/public_html/musician-app
-               # git clone https://github.com/tawdebo/musician-app.git
-               git pull origin master
+               git clone https://github.com/tawdebo/musician-app.git
+               # git pull origin master
                cd /home/devops/public_html/musician-app/client
                /home/devops/bin/node -v
                /home/devops/bin/npm -v
