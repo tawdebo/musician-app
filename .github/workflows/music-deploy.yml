@@ -6,6 +6,8 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [master]
 
 
 jobs:
@@ -28,7 +30,7 @@ jobs:
           script: |
                cd /home/devops/public_html && rm -rf /home/devops/public_html/musician-app
                # git clone https://github.com/tawdebo/musician-app.git
-               git pull origin master
+               git pull 
                cd /home/devops/public_html/musician-app/client
                /home/devops/bin/node -v
                /home/devops/bin/npm -v
