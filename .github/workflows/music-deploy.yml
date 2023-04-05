@@ -7,7 +7,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 
 jobs:
@@ -28,9 +28,10 @@ jobs:
           # key:  ${{ secrets.SSH_KEY }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-               cd /home/devops/public_html && rm -rf /home/devops/public_html/musician-app
+               cd /home/devops/public_html 
+               rm -rf /home/devops/public_html/musician-app
                # git clone https://github.com/tawdebo/musician-app.git
-               git pull master
+               git pull origin master
                cd /home/devops/public_html/musician-app/client
                /home/devops/bin/node -v
                /home/devops/bin/npm -v
