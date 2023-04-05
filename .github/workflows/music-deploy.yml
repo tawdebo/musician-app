@@ -33,13 +33,12 @@ jobs:
                git clone https://github.com/tawdebo/musician-app.git
                # git pull origin master
                cd /home/devops/public_html/musician-app/client
-               /home/devops/bin/node -v
-               /home/devops/bin/npm -v
-               /home/devops/bin/pm2 status
-               /home/devops/bin/npm install
-               /home/devops/bin/npm run build
-               /home/devops/bin/pm2 start npm -- start
+               ~/bin/node -v
+               ~/bin/pm2 status
+               ~/bin/npm install
+               ~/bin/npm run build
+               ~/bin/pm2 start npm -- start
                cd /home/devops/public_html/musician-app  
-               /home/devops/bin/npm install
-               /home/devops/bin/npm run build
-               /home/devops/bin/pm2 start npm -- start
+               ~/bin/npm install
+               ~/bin/npm run build
+               ~/bin/pm2 start npm -- start
