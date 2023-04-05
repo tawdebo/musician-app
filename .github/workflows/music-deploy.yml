@@ -28,13 +28,13 @@ jobs:
           script: |
                cd /home/devops/public_html && rm -rf /home/devops/public_html/musician-app && git clone https://github.com/tawdebo/musician-app.git
                cd /home/devops/public_html/musician-app/client
-               node -v
-               npm -v
-               pm2 status
-               npm install
-               npm run build
-               pm2 start npm -- start
+               /home/devops/bin/node -v
+               /home/devops/bin/npm -v
+               /home/devops/bin/pm2 status
+               /home/devops/bin/npm install
+               /home/devops/bin/npm run build
+               /home/devops/bin/pm2 start npm -- start
                cd /home/devops/public_html/musician-app  
-               npm install
-               npm run build
-               pm2 start npm -- start
+               /home/devops/bin/npm install
+               /home/devops/bin/npm run build
+               /home/devops/bin/pm2 start npm -- start
