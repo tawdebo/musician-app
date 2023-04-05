@@ -23,7 +23,8 @@ jobs:
        with:
           host: ${{ secrets.SSH_IP }}
           username:  ${{ secrets.SSH_USERNAME }}
-          key:  ${{ secrets.SSH_KEY }}
+          # key:  ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           script: |
                cd /home/ubuntu/ && rm -rf /home/ubuntu/musician-app && git clone https://github.com/tawdebo/musician-app.git
                cd /home/ubuntu/musician-app/client
