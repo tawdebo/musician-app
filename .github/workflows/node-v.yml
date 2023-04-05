@@ -37,5 +37,6 @@ jobs:
         script: |
           cd ~/public_html/musician-app
           git pull origin master
-          npm install --production
-          pm2 restart node-app
+          /home/devops/bin/npm install --production
+          /home/devops/bin/pm2 restart node-app
+          /home/devops/bin/pm2 status
